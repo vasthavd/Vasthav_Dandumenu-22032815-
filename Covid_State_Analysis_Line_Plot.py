@@ -1,7 +1,10 @@
+"""
+(1) - Line Plot visualization:
+    
+Writing a program to visualize state-wise Covid data, 
+of the country India with the help of a line plot.
 
-# Writing a program to visualize Covid data, 
-# state-wise of the country India with the help of a line plot.
-
+"""
 
 # Importing all required modules/packages with genral shortforms.
 import pandas as pd
@@ -19,8 +22,10 @@ def covid_state_analysis(covid_data, state):
     
     Parameters
     ----------
-        covid_data (pd.DataFrame): Monthly covid data read through pandas.
-        state (str): Name of the state to be analysed with data.
+        covid_data : (pd.DataFrame)
+            Monthly covid data read through pandas.
+        state : (str)
+            Name of the state to be analysed with data.
         
     Returns
     -------
@@ -38,12 +43,12 @@ def covid_state_analysis(covid_data, state):
     # Adjusting the figure size to 10x7 inches.
     plt.figure(figsize=(10, 7))
     
-    """
-    Plotting the data for Confirmed Indian National cases, 
-    Confirmed Foreign National cases, Cured cases, 
-    and Deaths registered during the selected month.
     
-    """
+    # Plotting the data for Confirmed Indian National cases, 
+    # Confirmed Foreign National cases, Cured cases, 
+    # and Deaths registered during the selected month.
+    
+    
     plt.plot(state['Date'], state['ConfirmedIndianNational'], 
              label = "Confirmed Indian National", marker = 'o')
     
@@ -80,10 +85,11 @@ def covid_state_analysis(covid_data, state):
     plt.show()
     
     
-# Reading march civid data of states from excel file
+# Reading march covid data of states from excel file
+# 'March.xlsx' Link = https://docs.google.com/spreadsheets/d/1R9opFJAFmCWGj4tYyEOHBYmLYn9cWj8V/edit?usp=sharing&ouid=104617704634998031407&rtpof=true&sd=true
 march_data = pd.read_excel('March.xlsx')
 
-# Call the plot_state function for the state of Kerala
+# Call the covid_state_analysis function for the states of Maharashtra & Kerala
 covid_state_analysis(march_data, 'Maharashtra')
 covid_state_analysis(march_data, 'Kerala')
 
