@@ -32,9 +32,6 @@ def covid_state_analysis(covid_data, state):
     # Segregating data for a selected state.
     state = covid_data[covid_data['State/UnionTerritory'] == state]
     
-    # Assigning the x-axis limits to the first,
-    # and last dates from the selected state data.
-    left, right = state.Date.values[[0, -1]]
     
     # Adjusting the figure size to 10x7 inches.
     plt.figure(figsize=(10, 7))
@@ -63,11 +60,16 @@ def covid_state_analysis(covid_data, state):
     # Rotating the x-axis tick labels by 90 degrees for better readability
     plt.xticks(state['Date'], rotation=90)
     
+    # Assigning the x-axis limits to the first,
+    # and last dates from the selected state data.
+    left, right = state.Date.values[[0, -1]]
+    plt.xlim((left, right))
+    
     # Setting the y-axis label to "Number of Covid Cases"
     plt.ylabel("Number of Covid Cases")
     
     # Adding a title to the plot based on the input selected state
-    plt.title('Covid analysis of {}'.format(state_title))
+    plt.title('Covid analysis of {}, India'.format(state_title))
     
     # Adding a legend to the plot to display labels
     plt.legend()
@@ -82,3 +84,6 @@ march_data = pd.read_excel('March.xlsx')
 # Call the plot_state function for the state of Kerala
 covid_state_analysis(march_data, 'Maharashtra')
 covid_state_analysis(march_data, 'Kerala')
+
+
+
