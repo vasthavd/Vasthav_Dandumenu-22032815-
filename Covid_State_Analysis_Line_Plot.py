@@ -10,19 +10,21 @@ import matplotlib.pyplot as plt
 # Defining a function covid_state_analysis.
 def covid_state_analysis(covid_data, state):
     
-    
     """
+    
     This function takes two arguments, monthly Covid data and a selected state.
     And visualizes the Covid state-wise data analysis with the help of a 
     line plot.
     It doesn't return any value, just plots the selceted state data.
     
-    Arguments:
+    Parameters
+    ----------
         covid_data (pd.DataFrame): Monthly covid data read through pandas.
         state (str): Name of the state to be analysed with data.
         
-    Return:
-        None
+    Returns
+    -------
+    None.
         
     """
     
@@ -84,6 +86,7 @@ march_data = pd.read_excel('March.xlsx')
 # Call the plot_state function for the state of Kerala
 covid_state_analysis(march_data, 'Maharashtra')
 covid_state_analysis(march_data, 'Kerala')
+
 
 
 
