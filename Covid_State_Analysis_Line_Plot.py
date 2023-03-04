@@ -1,8 +1,8 @@
 """
-(1) - Line Plot visualization:
-    
-Writing a program to visualize state-wise Covid data, 
-of the country India with the help of a line plot.
+
+ Question (1) - Line Plot visualization:
+ Writing a program to visualize Covid data, 
+ state-wise of the country India with the help of a line plot for 2021.
 
 """
 
@@ -41,7 +41,7 @@ def covid_state_analysis(covid_data, state):
     
     
     # Adjusting the figure size to 10x7 inches.
-    plt.figure(figsize=(10, 7))
+    plt.figure(figsize = (10, 7))
     
     
     # Plotting the data for Confirmed Indian National cases, 
