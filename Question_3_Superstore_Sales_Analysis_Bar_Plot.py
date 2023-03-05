@@ -55,7 +55,7 @@ def superstore_sales_plot(store_data, type_variable):
         plt.xticks(rotation = 90)
     
     # Setting the y-axis label to 'Sales between 2014 - 2017'   
-    plt.ylabel('Sales')
+    plt.ylabel('Sales in $')
     
     # Adding a title to the plot based on the input
     plt.title(f'Total sales of the Superstore by {type_variable} between 2014 - 2017')
