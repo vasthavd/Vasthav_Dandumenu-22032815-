@@ -2,7 +2,7 @@
 
  Question (1) - Line Plot visualization:
  Writing a program to visualize Covid data, 
- state-wise of the country India with the help of a line plot for 2021.
+ state-wise of the country India with the help of a line plot for 2020.
 
 """
 
