@@ -6,7 +6,7 @@
 
 """
 
-# Importing all required modules/packages with genral shortforms.
+# Importing all required modules/packages with general shortforms.
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -76,7 +76,7 @@ def covid_state_analysis(covid_data, state):
     plt.ylabel("Number of Covid Cases")
     
     # Adding a title to the plot based on the input selected state
-    plt.title('Covid analysis of {}, India'.format(state_title))
+    plt.title(f'Covid analysis of {state_title}, India')
     
     # Adding a legend to the plot to display labels
     plt.legend()
